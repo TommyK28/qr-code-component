@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -13,7 +15,8 @@
     font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/outfit-v14-latin/outfit-v14-latin-regular.woff2") format("woff2");
+    src: url("../fonts/outfit-v14-latin/outfit-v14-latin-regular.woff2")
+        format("woff2");
 }
 /* outfit-700 - latin */
 @font-face {
@@ -21,7 +24,8 @@
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
-    src: url("../fonts/outfit-v14-latin/outfit-v14-latin-700.woff2") format("woff2");
+    src: url("../fonts/outfit-v14-latin/outfit-v14-latin-700.woff2")
+        format("woff2");
 }
 
 :root {
@@ -45,7 +49,7 @@
 }
 
 @layer typography {
-    h2 {
+    h1 {
         font-family: var(--font-family__primary);
         font-size: var(--font-size__title);
         font-weight: var(--font-weight__bold);
