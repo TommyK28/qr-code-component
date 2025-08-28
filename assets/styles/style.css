@@ -1,0 +1,110 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* outfit-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/outfit-v14-latin/outfit-v14-latin-regular.woff2") format("woff2");
+}
+/* outfit-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/outfit-v14-latin/outfit-v14-latin-700.woff2") format("woff2");
+}
+
+:root {
+    /* Colors */
+    --color__white: hsl(0, 0%, 100%);
+    --color__gray-900: hsl(219, 44%, 22%);
+    --color__gray-500: hsl(216, 15%, 48%);
+    --color__gray-300: hsl(212, 45%, 89%);
+    --shadow: 0 25px 25px hsla(0, 0%, 0%, 0.047);
+
+    /* Font Family */
+    --font-family__primary: "Outfit", sans-serif;
+
+    /* Font Sizes */
+    --font-size__title: 22px;
+    --font-size__body: 15px;
+
+    /* Font weights */
+    --font-weight__regular: 400;
+    --font-weight__bold: 700;
+}
+
+@layer typography {
+    h2 {
+        font-family: var(--font-family__primary);
+        font-size: var(--font-size__title);
+        font-weight: var(--font-weight__bold);
+        color: var(--color__gray-900);
+    }
+
+    p {
+        font-family: var(--font-family__primary);
+        font-size: var(--font-size__body);
+        font-weight: var(--font-weight__regular);
+        color: var(--color__gray-500);
+        line-height: 1.5;
+    }
+}
+
+@layer base {
+    section {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        background-color: var(--color__gray-300);
+        font-family: var(--font-family__primary);
+    }
+}
+
+.qr__cart {
+    text-align: center;
+    background-color: var(--color__white);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    max-width: 320px;
+    padding: 16px 16px 36px 16px;
+
+    display: grid;
+    gap: 24px;
+}
+
+.qr__cart .qr__cart-image {
+    max-width: 288px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.qr__cart .qr__cart-image img {
+    border-radius: 10px;
+}
+
+.qr__cart .qr__cart-content {
+    display: grid;
+    gap: 16px;
+    padding-inline: 8px;
+}
